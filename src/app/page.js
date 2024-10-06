@@ -1,101 +1,152 @@
 import Image from "next/image";
-
+import Menu from "../components/Menu/menu.jsx";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="mainContainer m-auto mt-1 relative">
+      <div className="usercard bg-white/15 rounded-lg flex p-3 box-border justify-between border-2 absolute top-[50px] left-[30px] w-[374px] h-[100px]">
+        <div className="usercard-left">
+          <h1 className="m-1 font-mono font-bold text-lg username-text">
+            Ensar_P
+          </h1>
+          <h4 className="m-1 username-level">Level 1</h4>
+          <div className="bg-purple-900 rounded-full h-2.5 w-[200px] border-1 bar">
+            <div className="bg-yellow-500 h-2.5 rounded-full w-[60%]"></div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="usercard-right flex justify-between">
+          <div className="box m-2 w-[65px] h-[50px] flex p-1 flex-col justify-center items-center">
+            <div className="up flex justify-center items-center">
+              <div className="icon w-1/3">
+                <Image
+                  className="point mt-2"
+                  src="/point.png"
+                  alt="Picture of the author"
+                  width={15}
+                  height={15}
+                  quality={100}
+                />
+              </div>
+              <div className="line w-1/3"></div>
+              <div className="opsion w-1/3">
+                <p className="hour-text">hour</p>
+              </div>
+            </div>
+            <div className="number">
+              <p className ="number-text">1089</p>
+            </div>
+          </div>
+          <div className="box m-2 w-[65px] h-[50px] flex p-1 flex-col justify-center items-center">
+            <div className="up flex justify-center items-center">
+              <div className="icon w-1/3">
+                <Image
+                  className="point mt-2"
+                  src="/point.png"
+                  alt="Picture of the author"
+                  width={15}
+                  height={15}
+                  quality={100}
+                />
+              </div>
+              <div className="line w-1/3"></div>
+              <div className="opsion w-1/3">
+                <p className="hour-text">tap</p>
+              </div>
+            </div>
+            <div className="number">
+              <p className ="number-text">1089</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="medium-1 flex justify-between absolute top-[210px] w-[374px] h-[100px] left-[45px]">
+        <div className="quest flex justify-center items-center flex-col p-5 bg-white/15 rounded-lg w-[70px] h-[70px] ml-5">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/guest.png"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            quality={100}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <p>Quest</p>
+        </div>
+        <div className="connect w-[130px] h-[55px] rounded-xl bg-yellow/50 text-white font-bold py-2 px-4 mr-2 flex items-center">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            className="vector mr-2 object-cover"
+            src="/Vector.png"
+            alt="Picture of the author"
+            width={25}
+            height={25}
+            quality={100}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <h4 className="connect-text">Connect</h4>
+        </div>
+      </div>
+      <div className="medium-2 flex absolute top-[290px] justify-center items-center left-[35%] font-bold">
+        <Image
+          className="m-2"
+          src="/point.png"
+          alt="Picture of the author"
+          width={50}
+          height={50}
+          quality={100}
+        />
+        <h4 className="point-text">98</h4>
+      </div>
+      <div className="medium-3 absolute top-[350px] justify-center items-center left-[55px] object-cover">
+        <Image
+          className="m-2 "
+          src="/door.png"
+          alt="door"
+          width={300}
+          height={300}
+          quality={100}
+        />
+      </div>
+      <div className="smoke-left flex absolute top-[230px]">
+        <Image
+          className="m-2"
+          src="/smoke-left.png"
+          alt="door"
+          width={300}
+          height={300}
+          quality={100}
+        />
+      </div>
+      <div className="smoke-right flex absolute top-[190px] right-[0px]">
+        <Image
+          className="m-2"
+          src="/smoke-right.png"
+          alt="door"
+          width={285}
+          height={300}
+          quality={100}
+        />
+      </div>
+      <div className="medium-1 flex justify-between absolute top-[720px] w-[374px] h-[100px] left-[45px]">
+        <div className="quest flex justify-center items-center relative flex-col p-5 bg-white/15 rounded-lg w-[70px] h-[70px] ml-5">
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/box.png"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            quality={100}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <p className="daily">Daily Reverd</p>
+        </div>
+        <div className="quest flex justify-center items-center absolute  flex-col p-5 bg-white/15 rounded-lg w-[70px] h-[70px] ml-5 right-[38px]">
+          <Image
+            src="/king.png"
+            alt="Picture of the author"
+            width={30}
+            height={30}
+            quality={100}
+          />
+          <p>Boost</p>
+        </div>
+      </div>
+      <Menu />
     </div>
   );
 }
+
+// page.js in css ini oluşturmama gerekiyordu global.css e yazmanın yanlış olduğunu fazlalık ve gereksiz olduğunu sonradan hatırladım.
